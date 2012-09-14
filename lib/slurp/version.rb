@@ -1,0 +1,3 @@
+module Slurp
+  VERSION = "0.0.2"
+end

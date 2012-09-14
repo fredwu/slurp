@@ -1,0 +1,11 @@
+defaults: &defaults
+  adapter: sqlite3
+  database: ":memory:"
+  verbosity: quiet
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
