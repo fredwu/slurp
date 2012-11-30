@@ -11,7 +11,9 @@ module Slurp
 
       config.after_initialize do
         if Rails.configuration.database_configuration[Rails.env]['database'] == ':memory:'
-          load "#{Rails.root}/db/schema.rb"
+          ActiveRecord::Migration.suppress_messages do
+            load "#{Rails.root}/db/schema.rb"
+          end
         end
       end
     end
